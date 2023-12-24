@@ -1,6 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using RideFox.Domain.Base;
 
 namespace RideFox.Domain;
+
+[Table("Sevice")]
 public class Service : BaseEntity
 {
 	#region Fields
@@ -10,24 +14,6 @@ public class Service : BaseEntity
 	[Required] public string Description { get; set; }
 	[Required] public DateTime Start { get; set; } = DateTime.Now;
 	public DateTime End { get; set; }
-
-	#endregion
-
-	#region Constructors
-
-	public Service()
-	{
-	}
-
-	public Service(Guid id, Scooter scooter, Staff staff, string description, DateTime start, DateTime end)
-	{
-		Id = id;
-		Scooter = scooter;
-		Staff = staff;
-		Description = description;
-		Start = start;
-		End = end;
-	}
 
 	#endregion
 }

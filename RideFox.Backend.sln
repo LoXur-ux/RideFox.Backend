@@ -11,7 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{81EE47E1-36F5-4384-BE00-5A7503119EAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideFox.Domain", "RideFox.Domain\RideFox.Domain.csproj", "{C00149AA-35C9-43BF-8380-88B6EB9CF48A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideFox.Domain", "RideFox.Domain\RideFox.Domain.csproj", "{C00149AA-35C9-43BF-8380-88B6EB9CF48A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideFox.Application", "RideFox.Application\RideFox.Application.csproj", "{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideFox.Persistence", "RideFox.Persistence\RideFox.Persistence.csproj", "{CCF66A30-8886-44B3-8834-0ECCCF58D657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideFox.WebApi", "RideFox.WebApi\RideFox.WebApi.csproj", "{719DCD30-BF81-4053-A053-9676660B87FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +29,27 @@ Global
 		{C00149AA-35C9-43BF-8380-88B6EB9CF48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C00149AA-35C9-43BF-8380-88B6EB9CF48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C00149AA-35C9-43BF-8380-88B6EB9CF48A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF66A30-8886-44B3-8834-0ECCCF58D657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF66A30-8886-44B3-8834-0ECCCF58D657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF66A30-8886-44B3-8834-0ECCCF58D657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF66A30-8886-44B3-8834-0ECCCF58D657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719DCD30-BF81-4053-A053-9676660B87FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719DCD30-BF81-4053-A053-9676660B87FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719DCD30-BF81-4053-A053-9676660B87FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719DCD30-BF81-4053-A053-9676660B87FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C00149AA-35C9-43BF-8380-88B6EB9CF48A} = {9555E9FF-0B45-46B5-9442-E130895DEF65}
+		{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5} = {9555E9FF-0B45-46B5-9442-E130895DEF65}
+		{CCF66A30-8886-44B3-8834-0ECCCF58D657} = {C17F025D-BDE5-459E-8571-50A85C80E704}
+		{719DCD30-BF81-4053-A053-9676660B87FD} = {4DF374BA-2D04-4561-A6AC-1A8EF71FD58F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81D88F6C-03EA-48C8-A2A4-1439ED83ACF4}

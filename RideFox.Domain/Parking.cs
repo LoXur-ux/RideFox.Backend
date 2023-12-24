@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using RideFox.Domain.Base;
 
 namespace RideFox.Domain;
 
@@ -10,21 +11,6 @@ public class Parking : BaseEntity
 	
 	[Required] public Address Address { get; set; }
 	[Required] public ICollection<Scooter> Scooters { get; set; }
-
-	#endregion
-
-	#region Constructors
-
-	public Parking()
-	{
-	}
-
-	public Parking(Guid id, Address address, ICollection<Scooter> scooters)
-	{
-		Id = id;
-		Address = address;
-		Scooters = scooters ?? new List<Scooter>();
-	}
 
 	#endregion
 }
