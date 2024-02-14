@@ -6,7 +6,7 @@ using RideFox.Domain;
 
 namespace RideFox.Application.Feature.Scooters.Commands.RemoveScooter;
 
-internal class RemoveScooterCommandHandler : IRequestHandler<RemoveScooterCommand, Unit>
+public class RemoveScooterCommandHandler : IRequestHandler<RemoveScooterCommand, Unit>
 {
 	private readonly IRideFoxDbContext _dbContext;
 

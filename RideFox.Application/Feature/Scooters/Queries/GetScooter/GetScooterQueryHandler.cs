@@ -8,6 +8,7 @@ using RideFox.Application.Interfaces;
 using RideFox.Domain;
 
 namespace RideFox.Application.Feature.Scooters.Queries.GetScooter;
+
 public class GetScooterQueryHandler : IRequestHandler<GetScooterQuery, ScooterVm>
 {
 	private IRideFoxDbContext _context;

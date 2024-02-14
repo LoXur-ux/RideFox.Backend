@@ -16,4 +16,6 @@ public class Address : BaseEntity
 	[Required] public Coordinate Coordinate { get; set; }
 
 	#endregion
+
+	public override string ToString() => Town + " " + Street + " " + Number + " " + Build;
 }

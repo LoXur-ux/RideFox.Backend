@@ -6,8 +6,9 @@ namespace RideFox.Application.Interfaces;
 
 public interface IRideFoxDbContext
 {
-	DbSet<Client> Addresses { get; set; }
+	DbSet<Address> Addresses { get; set; }
 	DbSet<Client> Clients { get; set; }
+	DbSet<Coordinate> Coordinates { get; set; }
 	DbSet<Parking> Parkings { get; set; }
 	DbSet<Path> Paths { get; set; }
 	DbSet<Payment> Payment { get; set; }

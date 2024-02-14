@@ -94,7 +94,7 @@ namespace RideFox.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Coordinate");
+                    b.ToTable("Coordinates");
                 });
 
             modelBuilder.Entity("RideFox.Domain.Parking", b =>
@@ -193,9 +193,8 @@ namespace RideFox.Persistence.Migrations
                     b.Property<Guid>("MVDAddressId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("State")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -311,7 +310,7 @@ namespace RideFox.Persistence.Migrations
                     b.Property<Guid?>("ParkingId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("ScooterName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -324,7 +323,7 @@ namespace RideFox.Persistence.Migrations
 
                     b.HasIndex("ParkingId");
 
-                    b.HasIndex("ScooterName")
+                    b.HasIndex("Name")
                         .IsUnique();
 
                     b.ToTable("Scooter");

@@ -203,7 +203,7 @@ namespace RideFox.Persistence.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Scooter_ScooterName",
                 table: "Scooter",
-                column: "ScooterName",
+                column: "Name",
                 unique: true);
 
             migrationBuilder.CreateIndex(

@@ -4,14 +4,17 @@ using Microsoft.Extensions.DependencyInjection;
 using RideFox.Application.Interfaces;
 
 namespace RideFox.Persistence;
+
+/// <summary>
+/// Класс встраивания зависимостей
+/// </summary>
 public static class DependencyInjection
 {
 	/// <summary>
 	/// Регистрация сервиса Контекста БД
 	/// </summary>
-	/// <param name="services"></param>
 	/// <param name="configuration">Файл конфигурации, из которого берется строка подключения</param>
-	/// <returns></returns>
+	/// <returns>Коллекция инициализированных сервисов</returns>
 	public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
 	{
 		string? connectionString = configuration["DbConnectionString"];

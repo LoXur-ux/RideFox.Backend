@@ -22,7 +22,7 @@ public class CreateScooterCommandHandler : IRequestHandler<CreateScooterCommand,
 		var scooter = new Scooter
 		{
 			Id = Guid.NewGuid(),
-			ScooterName = request.ScooterName,
+			Name = request.Name,
 			DateOfCommissioning = request.DateOfCommissioning,
 			Status = request.Status,
 			Rents = null,

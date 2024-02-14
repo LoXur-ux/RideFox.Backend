@@ -10,7 +10,7 @@ public class Scooter : BaseEntity
 {
 	#region Fields
 
-	[Required] public string ScooterName { get; set; }
+	[Required] public string Name { get; set; }
 	[Required] public DateTime DateOfCommissioning { get; set; } = DateTime.Now;
 	[Required] public ScooterStatus Status { get; set; } = ScooterStatus.Available;
 	[Required] public Coordinate Coordinate { get; set; }

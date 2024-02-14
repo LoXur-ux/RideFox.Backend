@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideFox.Application", "Ride
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideFox.Persistence", "RideFox.Persistence\RideFox.Persistence.csproj", "{CCF66A30-8886-44B3-8834-0ECCCF58D657}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideFox.WebApi", "RideFox.WebApi\RideFox.WebApi.csproj", "{719DCD30-BF81-4053-A053-9676660B87FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideFox.WebApi", "RideFox.WebApi\RideFox.WebApi.csproj", "{719DCD30-BF81-4053-A053-9676660B87FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scooters.Tests", "Scooter.Tests\Scooters.Tests.csproj", "{46EEADF0-A278-4126-AD44-A071F5DD7B21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{719DCD30-BF81-4053-A053-9676660B87FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719DCD30-BF81-4053-A053-9676660B87FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719DCD30-BF81-4053-A053-9676660B87FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EEADF0-A278-4126-AD44-A071F5DD7B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EEADF0-A278-4126-AD44-A071F5DD7B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EEADF0-A278-4126-AD44-A071F5DD7B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EEADF0-A278-4126-AD44-A071F5DD7B21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{CF158C4A-9EC9-4872-A1DC-50F1A3EDFDF5} = {9555E9FF-0B45-46B5-9442-E130895DEF65}
 		{CCF66A30-8886-44B3-8834-0ECCCF58D657} = {C17F025D-BDE5-459E-8571-50A85C80E704}
 		{719DCD30-BF81-4053-A053-9676660B87FD} = {4DF374BA-2D04-4561-A6AC-1A8EF71FD58F}
+		{46EEADF0-A278-4126-AD44-A071F5DD7B21} = {81EE47E1-36F5-4384-BE00-5A7503119EAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81D88F6C-03EA-48C8-A2A4-1439ED83ACF4}

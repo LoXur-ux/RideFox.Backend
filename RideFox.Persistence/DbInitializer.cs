@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace RideFox.Persistence;
+
+/// <summary>
+/// Класс инициализации БД
+/// </summary>
 public class DbInitializer
 {
 	/// <summary>

@@ -5,10 +5,17 @@ using RideFox.Persistence.EntityTypeConfigurations;
 using Path = RideFox.Domain.Path;
 
 namespace RideFox.Persistence;
+
+/// <summary>
+/// Класс контекста БД
+/// </summary>
 public class RideFoxDbContext : DbContext, IRideFoxDbContext
 {
-	public DbSet<Client> Addresses { get; set; }
+	#region Fields
+
+	public DbSet<Address> Addresses { get; set; }
 	public DbSet<Client> Clients { get; set; }
+	public DbSet<Coordinate> Coordinates { get; set; }
 	public DbSet<Parking> Parkings { get; set; }
 	public DbSet<Path> Paths { get; set; }
 	public DbSet<Payment> Payment { get; set; }
@@ -18,12 +25,18 @@ public class RideFoxDbContext : DbContext, IRideFoxDbContext
 	public DbSet<Service> Services { get; set; }
 	public DbSet<Staff> Staffs { get; set; }
 
+	#endregion Fields
+
 	public RideFoxDbContext(DbContextOptions<RideFoxDbContext> options) : base(options) { }
 
+	/// <summary>
+	/// Конфигурация при инициализации моделей
+	/// </summary>
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		modelBuilder.ApplyConfiguration(new AddressConfigurations());
 		modelBuilder.ApplyConfiguration(new ClientConfiguration());
+		modelBuilder.ApplyConfiguration(new CoordinateConfigurations());
 		modelBuilder.ApplyConfiguration(new ParkingConfiguration());
 		modelBuilder.ApplyConfiguration(new PathConfiguration());
 		modelBuilder.ApplyConfiguration(new PaymentConfiguration());

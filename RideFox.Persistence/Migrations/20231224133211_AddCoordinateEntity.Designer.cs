@@ -12,8 +12,8 @@ using RideFox.Persistence;
 namespace RideFox.Persistence.Migrations
 {
     [DbContext(typeof(RideFoxDbContext))]
-    [Migration("20231224114718_ChageHumanToPerson_FixAddress")]
-    partial class ChageHumanToPerson_FixAddress
+    [Migration("20231224133211_AddCoordinateEntity")]
+    partial class AddCoordinateEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,13 +36,8 @@ namespace RideFox.Persistence.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("character varying(10)");
 
-                    b.Property<string>("Latitude")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Longitude")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<Guid>("CoordinateId")
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Number")
                         .IsRequired()
@@ -60,6 +55,8 @@ namespace RideFox.Persistence.Migrations
                         .HasColumnType("character varying(80)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CoordinateId");
 
                     b.HasIndex("Id")
                         .IsUnique();
@@ -84,6 +81,23 @@ namespace RideFox.Persistence.Migrations
                     b.HasIndex("PersonId");
 
                     b.ToTable("Client");
+                });
+
+            modelBuilder.Entity("RideFox.Domain.Coordinate", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double precision");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Coordinates");
                 });
 
             modelBuilder.Entity("RideFox.Domain.Parking", b =>
@@ -182,9 +196,8 @@ namespace RideFox.Persistence.Migrations
                     b.Property<Guid>("MVDAddressId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("State")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -291,14 +304,11 @@ namespace RideFox.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid>("CoordinateId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("DateOfCommissioning")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<double>("Latitude")
-                        .HasColumnType("double precision");
-
-                    b.Property<double>("Longitude")
-                        .HasColumnType("double precision");
 
                     b.Property<Guid?>("ParkingId")
                         .HasColumnType("uuid");
@@ -311,6 +321,8 @@ namespace RideFox.Persistence.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CoordinateId");
 
                     b.HasIndex("ParkingId");
 
@@ -374,6 +386,17 @@ namespace RideFox.Persistence.Migrations
                     b.HasIndex("PersonId");
 
                     b.ToTable("Staff");
+                });
+
+            modelBuilder.Entity("RideFox.Domain.Address", b =>
+                {
+                    b.HasOne("RideFox.Domain.Coordinate", "Coordinate")
+                        .WithMany()
+                        .HasForeignKey("CoordinateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Coordinate");
                 });
 
             modelBuilder.Entity("RideFox.Domain.Client", b =>
@@ -481,9 +504,17 @@ namespace RideFox.Persistence.Migrations
 
             modelBuilder.Entity("RideFox.Domain.Scooter", b =>
                 {
+                    b.HasOne("RideFox.Domain.Coordinate", "Coordinate")
+                        .WithMany()
+                        .HasForeignKey("CoordinateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("RideFox.Domain.Parking", null)
                         .WithMany("Scooters")
                         .HasForeignKey("ParkingId");
+
+                    b.Navigation("Coordinate");
                 });
 
             modelBuilder.Entity("RideFox.Domain.Service", b =>

@@ -8,6 +8,9 @@ using RideFox.WebApi.Models;
 
 namespace RideFox.WebApi.Controllers;
 
+/// <summary>
+/// Класс-контроллер, обрабатывающий запросы, связанные с самокатами
+/// </summary>
 [Route("api/[controller]")]
 public class ScooterController : BaseController
 {

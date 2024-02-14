@@ -220,7 +220,7 @@ namespace RideFox.Persistence.Migrations
                     b.Property<Guid?>("ParkingId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("ScooterName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 

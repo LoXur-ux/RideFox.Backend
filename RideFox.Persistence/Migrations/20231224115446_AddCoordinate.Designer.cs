@@ -317,7 +317,7 @@ namespace RideFox.Persistence.Migrations
                     b.Property<Guid?>("ParkingId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("ScooterName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -328,7 +328,7 @@ namespace RideFox.Persistence.Migrations
 
                     b.HasIndex("ParkingId");
 
-                    b.HasIndex("ScooterName")
+                    b.HasIndex("Name")
                         .IsUnique();
 
                     b.ToTable("Scooter");

@@ -19,7 +19,7 @@ public class UpdateScooterCommandHandler : IRequestHandler<UpdateScooterCommand,
 		Scooter? scooter = await _dbContext.Scooters.FirstOrDefaultAsync(s => s.Id == request.Id, cancellationToken)
 			?? throw new NotFoundEntity(nameof(Scooter), request.Id);
 
-		scooter.ScooterName = request.ScooterName;
+		scooter.Name = request.Name;
 		scooter.Status = request.Status;
 		scooter.Services = request.Services;
 		scooter.Rents = request.Rents;

@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RideFox.Domain;
 
 namespace RideFox.Persistence.EntityTypeConfigurations;
+
+/// <summary>
+/// Класс конфигурации типа <see cref="Service"/>
+/// </summary>
 public class ServiceConfiguration : IEntityTypeConfiguration<Service>
 {
 	public void Configure(EntityTypeBuilder<Service> builder)

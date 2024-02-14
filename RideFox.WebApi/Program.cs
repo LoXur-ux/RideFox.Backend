@@ -6,8 +6,15 @@ using RideFox.Persistence;
 
 namespace RideFox.WebApi;
 
+/// <summary>
+/// Основной класс программы с методом Main
+/// </summary>
 public class Program
 {
+	/// <summary>
+	/// Точка входа в приложение
+	/// </summary>
+	/// <param name="args"></param>
 	public static void Main(string[] args)
 	{
 		WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
