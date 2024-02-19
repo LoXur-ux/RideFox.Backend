@@ -11,8 +11,8 @@ public interface IRideFoxDbContext
 	DbSet<Coordinate> Coordinates { get; set; }
 	DbSet<Parking> Parkings { get; set; }
 	DbSet<Path> Paths { get; set; }
-	DbSet<Payment> Payment { get; set; }
-	DbSet<Penalty> Penalty { get; set; }
+	DbSet<Payment> Payments { get; set; }
+	DbSet<Penalty> Penalties { get; set; }
 	DbSet<Rent> Rents { get; set; }
 	DbSet<Scooter> Scooters { get; set; }
 	DbSet<Service> Services { get; set; }

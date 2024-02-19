@@ -6,7 +6,7 @@ using RideFox.Application.Common.Exceptions;
 using RideFox.Application.Interfaces;
 using RideFox.Domain;
 
-namespace RideFox.Application.Feature.Scooters.Queries.GetScooters;
+namespace RideFox.Application.Feature.Scooters.Queries.GetScootersList;
 
 public class GetScooterListQueryHandler : IRequestHandler<GetScooterListQuery, ScooterListVm>
 {

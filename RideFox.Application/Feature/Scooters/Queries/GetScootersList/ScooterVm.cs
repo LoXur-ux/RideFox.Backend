@@ -3,7 +3,7 @@ using RideFox.Application.Common.Mapping;
 using RideFox.Domain;
 using RideFox.Domain.Statuses;
 
-namespace RideFox.Application.Feature.Scooters.Queries.GetScooters;
+namespace RideFox.Application.Feature.Scooters.Queries.GetScootersList;
 
 public class ScooterVm : IMapWith<Scooter>
 {

@@ -18,8 +18,8 @@ public class RideFoxDbContext : DbContext, IRideFoxDbContext
 	public DbSet<Coordinate> Coordinates { get; set; }
 	public DbSet<Parking> Parkings { get; set; }
 	public DbSet<Path> Paths { get; set; }
-	public DbSet<Payment> Payment { get; set; }
-	public DbSet<Penalty> Penalty { get; set; }
+	public DbSet<Payment> Payments { get; set; }
+	public DbSet<Penalty> Penalties { get; set; }
 	public DbSet<Rent> Rents { get; set; }
 	public DbSet<Scooter> Scooters { get; set; }
 	public DbSet<Service> Services { get; set; }

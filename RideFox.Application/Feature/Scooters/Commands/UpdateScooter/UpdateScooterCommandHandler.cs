@@ -5,6 +5,7 @@ using RideFox.Application.Interfaces;
 using RideFox.Domain;
 
 namespace RideFox.Application.Feature.Scooters.Commands.UpdateScooter;
+
 public class UpdateScooterCommandHandler : IRequestHandler<UpdateScooterCommand, Guid>
 {
 	private readonly IRideFoxDbContext _dbContext;

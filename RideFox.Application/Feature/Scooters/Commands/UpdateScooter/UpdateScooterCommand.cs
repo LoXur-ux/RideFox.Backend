@@ -3,6 +3,7 @@ using RideFox.Domain;
 using RideFox.Domain.Statuses;
 
 namespace RideFox.Application.Feature.Scooters.Commands.UpdateScooter;
+
 public class UpdateScooterCommand : IRequest<Guid>
 {
 	public Guid Id { get; set; }

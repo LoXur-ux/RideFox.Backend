@@ -3,6 +3,7 @@ using RideFox.Application;
 using RideFox.Application.Common.Mapping;
 using RideFox.Application.Interfaces;
 using RideFox.Persistence;
+using RideFox.WebApi.Middleware;
 
 namespace RideFox.WebApi;
 
@@ -40,7 +41,6 @@ public class Program
 			});
 		});
 
-
 		// Аналог метода Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		WebApplication app = builder.Build();
 		using(IServiceScope scope = app.Services.CreateScope())
@@ -55,6 +55,7 @@ public class Program
 		}
 
 		// Подключение Конфигураций
+		app.UseCustomExceptionHandler();
 		app.UseRouting();
 		app.UseHttpsRedirection();
 		app.UseCors("AllowAll");
